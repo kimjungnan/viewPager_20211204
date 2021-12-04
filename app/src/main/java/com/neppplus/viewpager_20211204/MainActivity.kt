@@ -28,5 +28,9 @@ class MainActivity : AppCompatActivity() {
         mvpe = MainViewPagerAdapter( supportFragmentManager )
         mainViewPager.adapter = mvpe
 
+//        xml 탭레이아웃 / 뷰페이저 연결
+
+        mainTableLayout.setupWithViewPager(mainViewPager)
+
     }
 }
