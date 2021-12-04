@@ -21,19 +21,22 @@ class MainViewPagerAdapter( fm : FragmentManager ) : FragmentPagerAdapter(fm) {
 
     }
 
+
+//    함수의 결과를 곧바로 3으로도 리턴 가능
+//    override fun getCount() = 3
     override fun getCount(): Int {
         return 3
 //        TODO("Not yet implemented")
     }
 
     override fun getItem(position: Int): Fragment {
-        if (position == 0){
-            return NameFragment()
-        } else if (position ==1 ){
-            return AddressFragment()
-        } else {
-            return AgeFragment()
+
+        return when (position){
+            0 -> NameFragment()
+            1 -> AddressFragment()
+            else -> AgeFragment()
         }
+
 
 //        TODO("Not yet implemented")
     }
